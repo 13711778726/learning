@@ -19,6 +19,16 @@
 <p>	adduser git   passwd git</p>
 <p>（3）初始化仓库</p>
 <p>	git init --bare learngit.git</p>
+<p>3.git生成多个key</p>
+<p>(1)为github配置新的key ，取名为github</p>
+<p>(2)生成秘钥:ssh-keygen -t rsa -C "xxx@gmail.com" -f ~/.ssh/github</p>
+<p>(3)配置conf文件支持：vi ~/.ssh/config（没有则创建）</p>
+<p>(4)配置参数:host github<br><br/>
+user git<br><br/>
+hostname github.com<br><br/>
+port 22<br><br/>
+identityfile ~/.ssh/github</p>
+<p>(5)获取公钥添加到github远程:cat ~/.ssh/github.pub</p>
 <p>二、Composer使用</p>
 <p>1.http://www.phpcomposer.com/</p>
 <p>2.http://pkg.phpcomposer.com/</p>
@@ -66,5 +76,8 @@
 <p>7.资料</p>
 <p>（1）本地环境安装redis</p>
  <p>http://www.cnblogs.com/yun007/p/3705353.html</p>
+ <p>(2)it资料学习</p>
+ <p>http://www.jikexueyuan.com/course/</p>
+ 
 </body>
 </html>
