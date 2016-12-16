@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>我的网站</title>
+</head>
+<body>
+<p>一、git使用：http://blog.jobbole.com/78960/</p>
+<p>1.生成秘钥</p>
+<p>(1)设置Git的user name和email：</p>
+<p>$ git config --global user.name "xuhaiyan"</p>
+<p>$ git config --global user.email "haiyan.xu.vip@gmail.com"</p>
+<p>(2)$ ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”</p>
+<p>$ cat ~/.ssh/id_rsa.pub</p>
+<p>2.git服务器搭建</p>
+<p>（1）安装插件和git</p>
+<p>	yum install -y git</p>
+<p>（2）创建git用户及设定权限</p>
+<p>	adduser git   passwd git</p>
+<p>（3）初始化仓库</p>
+<p>	git init --bare learngit.git</p>
+<p>二、Composer使用</p>
+<p>1.http://www.phpcomposer.com/</p>
+<p>2.http://pkg.phpcomposer.com/</p>
+<p>3.https://packagist.org/packages/</p>
+
+<p>三、在CenTos 7上开启关闭防火墙</p>
+<p>查询防火墙状态：firewall-cmd --state</p>
+<p>关闭防火墙：systemctl stop firewalld.service</p>
+<p>开启防火墙： systemctl start firewalld.service</p>
+<p>禁止firewall开机启动：systemctl disable firewalld.service</p>
+<p>四、redis安装</p>
+<p>1.下载安装编译:</p>
+<p># wget http://download.redis.io/releases/redis-2.8.17.tar.gz</p>
+<p># tar xzf redis-2.8.17.tar.gz</p>
+<p># cd redis-2.8.17</p>
+<p># make</p>
+<p># make install<?
+<p>2.设置配置文件路径:</p>
+<p>（1）创建redis文件：mkdir -p /etc/redis</p>
+<p>（2）把配置文件复制到创建的文件：cp redis.conf /etc/redis</p>
+<p>3.修改配置文件：</p>
+<p># vim /etc/redis/redis.conf</p>
+<p>修改为： daemonize yes</p>
+<p>4.操作：</p>
+<p>启动Redis: /usr/local/bin/redis-server /etc/redis/redis.conf</p>
+<p>关闭：redis-cli shutdown     或  shutdown</p>
+<p>清除缓存：redis-cli flushall</p>
+<p>查看状态 ：ss -nlp|grep redis   或   ps -ef | grep redis</p>
+<p>5.PHP7添加redis插件</p>
+<p>（1）wget -c https://github.com/phpredis/phpredis/archive/php7.zip</p>
+<p>（2）unzip php7.zip</p>
+<p>（3）cd phpredis-php7</p>
+<p>（4）/usr/local/php7/bin/phpize</p>
+<p>（5）./configure --with-php-config=/usr/local/php7/bin/php-config</p>
+<p>（6）make/make install</p>
+<p>（7）/usr/local/php7/etc/php.ini   中加入extension="redis.so"</p>
+<p>6.编译安装php7的swoole</p>
+<p>（1）wget -c https://github.com/swoole/swoole-src/archive/swoole-1.7.21-stable.tar.gz</p>
+<p>（2）tar zxvf swoole-1.7.21-stable.tar.gz</p>
+<p>（3）cd swoole-src-swoole-1.7.21-stable/</p>
+<p>（4）/usr/local/php7/bin/phpize</p>
+<p>（5）./configure --with-php-config=/usr/local/php7/bin/php-config</p>
+<p>（6）make  make install</p>
+<p>（7）/usr/local/php7/etc/php.ini   中加入extension="swoole.so"</p>
+<p>7.资料</p>
+<p>（1）本地环境安装redis</p>
+ <p>http://www.cnblogs.com/yun007/p/3705353.html</p>
+</body>
+</html>
