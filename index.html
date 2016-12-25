@@ -83,5 +83,12 @@ identityfile ~/.ssh/github</p>
  <p>(3.1)配置仓库/etc/gitlab/gitlab.rb 改为服务器ip或域名</p>
  <p>(3.2)gitlab-ctl reconfigure命令编译</p>
  <p>(3.3)配置管理员邮箱：开/etc/gitlab/gitlab.rb,将# gitlab_rails['gitlab_email_from'] = 'gitlab@example.com'换成自己的邮箱</p>
+ <p>(4).远程连接数据库</p>
+ <p>(4.1)给定权限：GRANT ALL PRIVILEGES ON *.* TO 'root'@'ip' IDENTIFIED BY 'password' WITH GRANT OPTION;<br/>flush privileges;</p>
+ <p>(4.2)关闭服务器防火墙：<br/>
+ 启动：# systemctl start  firewalld<br/>
+ 查看状态：# systemctl status firewalld 或者 firewall-cmd --state<br/>
+ 停止：# systemctl disable firewalld<br/>
+ 禁用：# systemctl stop firewalld</p>
 </body>
 </html>
