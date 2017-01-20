@@ -1,0 +1,13 @@
+服务器
+123.207.27.76   sdlong543126
+数据库
+123.207.27.76:8080  admin:sdlong543126       root:hjx514620
+
+账号：admin
+密码：hjx514620
+http://wx.gzjinxia.com/web/
+
+易企秀：
+服务器ip：120.76.249.211
+账号：root
+密码：Aiziji91819hjx
