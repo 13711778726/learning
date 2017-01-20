@@ -11,3 +11,6 @@ http://wx.gzjinxia.com/web/
 服务器ip：120.76.249.211
 账号：root
 密码：Aiziji91819hjx
+
+数据库
+120.76.249.211:8080    admin:Aiziji91819hjx   root:Aiziji91819hjx
