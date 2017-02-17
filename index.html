@@ -19,13 +19,13 @@
 <p>	adduser git   passwd git</p>
 <p>（3）初始化仓库</p>
 <p>	git init --bare learngit.git</p>
-<p>3.git生成多个key</p>
+<p>3.git本地生成多个key</p>
 <p>(1)为github配置新的key ，取名为github</p>
 <p>(2)生成秘钥:ssh-keygen -t rsa -C "xxx@gmail.com" -f ~/.ssh/github</p>
 <p>(3)配置conf文件支持：vi ~/.ssh/config（没有则创建）</p>
 <p>(4)配置参数:
 Host github.com</br>                 
-HostName github.com</p>br>
+HostName github.com</p><br/>
 User linlizhu</br>  
 Port 22</br>  
 IdentityFile ~/.ssh/github</p>
@@ -109,8 +109,27 @@ IdentityFile ~/.ssh/github</p>
  </p>
  <p>(4)gitlab-ctl reconfigure</p>
  <p>(5)初始化：http://ip地址</p>
- <p></p>
- <p></p>
- <p></p>
+ <p>9.服务器上生成多key使用linux</p>
+ <p>(1)生成key跟本地一样步骤</p>
+ <p>(2)配置config<br>
+	host ip地址或域名
+	user git
+
+	hostname ip地址或域名
+
+	port 22
+
+	identityfile ~/.ssh/gitlab
+
+	host gitthub.com
+	user git
+
+	hostname github.com
+
+	port 22
+
+	identityfile ~/.ssh/id_rsa
+
+ </p>
 </body>
 </html>
