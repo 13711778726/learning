@@ -91,5 +91,26 @@ IdentityFile ~/.ssh/github</p>
  查看状态：# systemctl status firewalld 或者 firewall-cmd --state<br/>
  停止：# systemctl disable firewalld<br/>
  禁用：# systemctl stop firewalld</p>
+ <p>8.gitlab安装</p>
+ <p>https://about.gitlab.com/downloads/#centos7</p>
+ <p>(1)yum install curl openssh-server openssh-clients postfix cronie<br/>
+	service postfix start<br/>
+	chkconfig postfix on<br/>
+	lokkit -s http -s ssh<br/>
+ </p>
+ <p>(2)curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash<br/>
+	yum install gitlab-ce<br/>
+ </p>
+ <p>(3)curl -LJO https://packages.gitlab.com/gitlab/gitlab-ce/packages/el/6/gitlab-ce-XXX.rpm/download<br/>
+	rpm -i gitlab-ce-XXX.rpm<br/>
+	如果报错则使用以下：<br/>
+	curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash<br/>
+	yum install gitlab-ce-8.14.10-ce.0.el6.x86_64
+ </p>
+ <p>(4)gitlab-ctl reconfigure</p>
+ <p>(5)初始化：http://ip地址</p>
+ <p></p>
+ <p></p>
+ <p></p>
 </body>
 </html>
