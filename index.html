@@ -134,5 +134,19 @@ IdentityFile ~/.ssh/github</p>
  </p>
  <p>laravel教程文档：https://laravel-china.org/laravel-tutorial/5.1/about</p>
  <p>10.walle安装配置文档地址：https://walle-web.io/docs/<p>
+ <p>11.nginx</p>
+ <p>11.1nginx启动：nginx -c /usr/local/nginx/conf/nginx.conf<br>
+	测试配置文件：nginx -t <br> 
+	从容停止Nginx:kill -QUIT 主进程号<br>
+	快速停止Nginx：kill -TERM 主进程号<br>
+	强制停止Nginx:pkill -9 主进程号<br>
+	平滑重启:kill -HUP 住进称号或进程号文件路径  或   /usr/nginx/sbin/nginx -s reload<br>
+ </p>
+ <p>12.composer使用</p>
+ <p>12.1初始化composer<br>
+	(1)在根目录下新建composer.json文件并编辑：{"require":{}}------安装composer前提<br>
+	(2)使用root以外的用户输入命令：composer update即可生成vender 文件。
+ </p>
+ <p>12.2:composer使用小技巧：http://www.phpcomposer.com/5-features-to-know-about-composer-php/</p>
 </body>
 </html>
