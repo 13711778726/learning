@@ -168,5 +168,16 @@ IdentityFile ~/.ssh/github</p>
     add_header Access-Control-Allow-Methods GET,POST,OPTIONS;</br>
  </p>
  <p>使用国内镜像：composer config -g repo.packagist composer https://packagist.phpcomposer.com</p>
+ <p>14php fileinfo扩展安装</p>
+ <p>检查环境是否支持php -i|grep fileinfo </p>
+ <p>下载对应版本扩展wget -O php-5.6.9.tar.gz http://cn2.php.net/get/php-5.6.9.tar.gz/from/this/mirror </p>
+ <p>解压tar -zxvf php-5.6.9.tar.gz </p>
+ <p>进入对应php版本扩展目录：php-5.6.9/ext/fileinfo</p>
+ <p>编译&&安装/usr/local/php/bin/phpize<br>
+ 	./configure -with-php-config=/usr/local/php/bin/php-config<br>
+	make && make install<br>
+	vim /usr/local/php/etc/php.ini<br>
+	加入:extension=fileinfo.so<br>
+ </p>
 </body>
 </html>
